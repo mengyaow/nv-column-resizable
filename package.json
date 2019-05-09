@@ -4,14 +4,11 @@
     "description" : "jQuery plugin to resize table columns",
 	"title" : "nv column resizable",
 	"author" : {
-		"name" : "Mengyao Wu",
+		"name" : "Mengyao Wu"
 	},
 	"licenses" : [{
 			"type" : "MIT",
 			"url" : "MIT-LICENSE.txt"
-		}, {
-			"type" : "GPL",
-			"url" : "GPL-LICENSE.txt"
 		}
 	],
 	"dependencies" : {
