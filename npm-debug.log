@@ -1,0 +1,110 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.9.5
+3 info using node@v6.2.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/mengyaow/projects/nv-column-resizable',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/mengyaow/.npm/colresizable/1.7.0/package.tgz not in flight; packing
+9 verbose correctMkdir /home/mengyaow/.npm correctMkdir not in flight; initializing
+10 info lifecycle colresizable@1.7.0~prepublish: colresizable@1.7.0
+11 silly lifecycle colresizable@1.7.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/home/mengyaow/.npm/colresizable/1.7.0/package.tgz',
+12 verbose tar pack   '/home/mengyaow/projects/nv-column-resizable' ]
+13 verbose tarball /home/mengyaow/.npm/colresizable/1.7.0/package.tgz
+14 verbose folder /home/mengyaow/projects/nv-column-resizable
+15 verbose addLocalTarball adding from inside cache /home/mengyaow/.npm/colresizable/1.7.0/package.tgz
+16 verbose correctMkdir /home/mengyaow/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd colresizable@1.7.0
+18 verbose afterAdd /home/mengyaow/.npm/colresizable/1.7.0/package/package.json not in flight; writing
+19 verbose correctMkdir /home/mengyaow/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /home/mengyaow/.npm/colresizable/1.7.0/package/package.json written
+21 silly publish { name: 'colresizable',
+21 silly publish   version: '1.7.0',
+21 silly publish   description: 'jQuery plugin to resize table columns',
+21 silly publish   title: 'nv column resizable',
+21 silly publish   author: { name: 'Mengyao Wu' },
+21 silly publish   licenses: [ { type: 'MIT', url: 'MIT-LICENSE.txt' } ],
+21 silly publish   dependencies: { jquery: '1 - 3' },
+21 silly publish   keywords:
+21 silly publish    [ 'resize table',
+21 silly publish      'resize columns',
+21 silly publish      'resize',
+21 silly publish      'resizable',
+21 silly publish      'columns',
+21 silly publish      'jquery-plugin',
+21 silly publish      'table',
+21 silly publish      'range slider',
+21 silly publish      'colresizable',
+21 silly publish      'resize table columns',
+21 silly publish      'jquery' ],
+21 silly publish   files: [ 'colResizable.min.js', './samples' ],
+21 silly publish   readme: '###This is forked from https://github.com/alvaro-prieto/colResizable and thanks to Alvaro!\r\nfixed some column resize issue for resizeMode: overflow:\r\n* table width doesn\'t change correctly when reduce cell width.\r\n* Other columns\' width would change together with the dragging columns.\r\n* And disabled onResize for window resizing handler(my project doesn\'t need this).\r\n\r\n![alt text](http://bacubacu.com/colresizable/githubLogo.png "colResizable jQuery plugin")\r\n\r\n# colResizable\r\n\r\ncolResizable is a free jQuery plugin designed to enhance any kind of HTML table object adding column resizing features by dragging column anchors manually. It is compatible with both mouse and touch devices and has some nice features such as layout persistence after page refresh or postback and compatibility with both percentage and pixel-based table layouts. It is tiny in size (colResizable 1.0 is only 2kb) and it is fully compatible with all major browsers(IE7+, Firefox, Chrome and Opera). \r\n\r\n#### [official website](http://bacubacu.com/colresizable/) &nbsp;&nbsp;&nbsp;&nbsp; [demos](http://bacubacu.com/colresizable/#samples) &nbsp;&nbsp;&nbsp;&nbsp; [documentation](http://bacubacu.com/colresizable/#attributes) &nbsp;&nbsp;&nbsp;&nbsp; [downloads](http://bacubacu.com/colresizable/#download) &nbsp;&nbsp;&nbsp;&nbsp; [github](https://github.com/alvaro-prieto/colResizable) \r\n\r\n## Features\r\ncolResizable was developed since no other similar plugin with the below listed features was found:\r\n\r\n* Compatible with mouse and touch devices (PC, tablets, and mobile phones)\r\n* Compatibility with both percentage and pixel-based table layouts\r\n* Column resizing not altering total table width (optional)\r\n* No external resources needed (such as images or stylesheets)\r\n* Optional layout persistence after page refresh or postback\r\n* Customization of column anchors\r\n* Small footprint\r\n* Cross-browser compatibility (IE7+, Chrome, Safari, Firefox)\r\n* Events\r\n\r\n\r\n## Usage\r\nTo use this plugin a script reference must be added to the colResizable.min.js file in the head section of the document once jQuery is loaded. To enhance a table (or collection of tables) point it with a jQuery wrapper and apply the colResizable() method. \r\n\r\n    $(function(){\r\n      $("table").colResizable();\r\n    });\r\n\r\n\r\n## Attributes\r\n\r\n\r\n*  **resizeMode**: [type: string] [default: \'fit\'] [version: 1.6] [values: \'fit\', \'flex\', \'overflow\']\r\n\r\n    It is used to set how the resize method works. Those are the possible values:\r\n    \r\n    * `\'fit\'`:  this is default resizing model, in which resizing a column does not alter table width, which means that when a column is expanded the next one shrinks. \r\n    * `\'flex\'`: in this mode the table can change its width and each column can shrink or expand independently if there is enough space in the parent container. If there is not enough space, columns will share its width as they are resized. Table will never get bigger than its parent.\r\n    * `\'overflow\'`: allows to resize columns with overflow of parent container.\r\n\r\n___\r\n* **disable**: [type: boolean] [default: false] [version: 1.0] \r\n\r\nWhen set to true it aims to remove all previously added enhancements such as events and additional DOM elements assigned by this plugin to a single or collection of tables. It is required to disable a previously *colResized* table prior its removal from the document object tree using JavaScript, and also before any DOM manipulations to an already *colResized* table such as adding columns, rows, etc.\r\n\r\n___\r\n* **disabledColumns**: [type: array of int] [default: []] [version: 1.6] \r\n\r\nAn array of column indexes to be excluded, so it will not be possible to drag them manually.\r\n\r\n___\r\n*  **liveDrag**: [type: boolean] [default: false] [version: 1.0] \r\n\r\nWhen set to true the table layout is updated while dragging column anchors. liveDrag enabled is more CPU consuming so it is not recommended for slow computers, specially when dealing with huge or extremely complicated tables.\r\n\r\n___\r\n\r\n* **postbackSafe**: [type: boolean] [default: false] [version: 1.3] \r\n\r\nThis attribute can be used to specify that the manually selected column widths must remain unaltered after a postback or browser refresh. This feature is mainly oriented to those pages created with server-side logic (codebehind), such as PHP or .NET, and it is only compatible with browsers with sessionStorage support (all modern browsers). However, if you are targeting older browsers (such as IE7 and IE8) you can still emulate sessionStorage using sessionStorage.js. It is important to note that some browsers (IE and FF) doesn’t enable the sessionStorage object while running the website directly from the local file system, so if you want to test this feature it is recommended to view the website through a web server or use browsers such as Chrome or Opera which doesn’t have this limitation. Don\'t worry about compatibility issues, once your site is up on the internet, all browsers will act in exactly the same way.\r\n___\r\n\r\n*  **partialRefresh**: [type: boolean] [default: false] [version: 1.5] \r\n\r\nThis attribute should be set to true if the table is inside of an updatePanel or any other kind of partial page refresh using ajax. Table\'s ID should be same before and after the partial partial refresh.\r\n\r\n___\r\n\r\n* **innerGripHtml**: [type: string] [default: empty string] [version: 1.0] \r\n\r\nIts purpose is to allow column anchor customization by defining the HTML to be used in the column grips to provide some visual feedback. It can be used in a wide range of ways to obtain very different outputs, and its flexibility can be increased by combining it with the draggingClass attribute.\r\n___\r\n\r\n* **draggingClass**: [type: string] [default: internal css class] [version: 1.0] \r\n\r\nThis attribute is used as the css class assigned to column anchors while being dragged. It can be used for visual feedback purposes.\r\n___\r\n\r\n* **minWidth**: [type: number] [default: 15] [version: 1.1] \r\n\r\nThis value specifies the minimum width (measured in pixels) that is allowed for the columns.\r\n___\r\n\r\n* **headerOnly**: [type: boolean] [default: false] [version: 1.2] \r\n\r\nThis attribute can be used to prevent vertical expansion of the column anchors to fit the table height. If it is set to true, column handler\'s size will be bounded to the first row\'s vertical size.\r\n___\r\n\r\n* **hoverCursor**: [type: string] [default: "e-resize"] [version: 1.3] \r\n\r\nThis attribute can be used to customize the cursor that will be displayed when the user is positioned on the column anchors.\r\n___\r\n\r\n* **dragCursor**: [type: string] [default: "e-resize"] [version: 1.3] \r\n\r\nDefines the cursor that will be used while the user is resizing a column.\r\n___\r\n\r\n* **flush**: [type: boolean] [default: false] [version: 1.3] \r\n\r\nFlush is only effective when postbackSafe is enabled. Its purpose is to remove all previously stored data related to the current table layout to get it back to its original layout preventing width restoration after postback.\r\n___\r\n\r\n* **marginLeft**: [type: string / null] [default: null] [version: 1.3] \r\n\r\nIf the target table contains an explicit margin-left CSS rule, the same value must be used in this attribute (for example: "auto", "20%", "10px"). The reason why it is needed it is because most browsers (all except of IE) don’t allow direct access to the current CSS rule applied to an element in its original units (such as "%", "em" or "auto" values). If you know any workaround which doesn’t involve iteration through all the styles defined in the site and any other external dependencies, please let me know!\r\n___\r\n\r\n* **marginRight**: [type: string / null] [default: null] [version: 1.3] \r\n\r\nIt behaves in exactly the same way than the previous attribute but applied to the right margin.\r\n___\r\n\r\n *  **fixed**: [deprecated: use "mode" instead] [type: boolean] [default: true] [version: 1.5 only] \r\n\r\nIt is used to set how the resize method works. In fixed mode resizing a column does not alter total table width, which means that when a column is expanded the next one shrinks. If fixed is set to false then table can change its width and each column can shrink or expand independently.\r\n\r\n_Note: There is a known issue where the CSS property `table-layout: fixed;` causes a minor conflict with resizing table widths. It is important to note that the `fixed` setting is different from the CSS property and it is encouraged not to apply that style to your tables._\r\n\r\n\r\n## Events\r\n\r\n* **onResize**: [type: callback function] [default: null] [version: 1.0] \r\n\r\nIf a callback function is supplied it will be fired when the user has ended dragging a column anchor altering the previous table layout. The callback function can obtain a reference to the updated table through the currentTarget attribute of the event retrieved by parameters\r\n\r\n___\r\n* **onDrag**: [type: callback function] [default: null] [version: 1.1] \r\n\r\nThis event is fired while dragging a column anchor if liveDrag is enabled. It can be useful if the table is being used as a multiple range slider. The callback function can obtain a reference to the updated table through the currentTarget attribute of the event retrieved by parameters\r\n\r\n## Backers\r\n\r\ncolResizable is being developed and maintained for free by Álvaro Prieto Lauroba since 2011. Fortunately there is some lovely people who donated to improve this plugin. [Do you like this plugin? Would you like to help me to improve it? Please! buy me a beer](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XLP55DVN85X8L)  \r\n\r\n[![Please donate](http://bacubacu.com/colresizable/donate.jpg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XLP55DVN85X8L)\r\n\r\n\r\n[![Lovely backers](http://yoliprieto.com/alvaro/colresizable/backers1.jpg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XLP55DVN85X8L)\r\n\r\nA million thanks to our lovely patrons: \r\n* [👑 👑 👑 👑 Mellouki Mohamed 👑 👑 👑 👑 ](https://uk.linkedin.com/in/mohamed-mellouki-13570128) \r\n* [👑 👑 👑 👑 Gilles Beaulac 👑 👑 👑 👑 ](https://www.linkedin.com/in/gillesbeaulac) \r\n* [💎 💎 💎 Maxim Morozenko 💎 💎 💎 ](https://morozenko.com/) \r\n* [Igor Samulenko](https://www.linkedin.com/in/igorsamulenko) \r\n* [Aaron Pesce](https://www.linkedin.com/in/aaron-pesce-9611988a) \r\n\r\n',
+21 silly publish   readmeFilename: 'readme.md',
+21 silly publish   gitHead: '0d76c8ca1e203f3dc5840bed2d3547063d6cb8b0',
+21 silly publish   _id: 'colresizable@1.7.0',
+21 silly publish   scripts: {},
+21 silly publish   _shasum: '798b3cdcc1b7851da157ac77eaf951eed00f0a66',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name colresizable
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry http://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'colresizable',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   name: 'colresizable',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri http://registry.npmjs.org/colresizable
+28 verbose publish registryBase http://registry.npmjs.org/
+29 silly publish uploading /home/mengyaow/.npm/colresizable/1.7.0/package.tgz
+30 verbose request uri http://registry.npmjs.org/colresizable
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 18:17:56
+33 verbose request using bearer token for auth
+34 verbose request id 7a394e79aa5e5b30
+35 http request PUT http://registry.npmjs.org/colresizable
+36 http 403 http://registry.npmjs.org/colresizable
+37 verbose headers { date: 'Thu, 09 May 2019 10:18:08 GMT',
+37 verbose headers   'content-type': 'application/json',
+37 verbose headers   'transfer-encoding': 'chunked',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'set-cookie': [ '__cfduid=d8cc16cb5927e38e558b460cdd87e8dc61557397088; expires=Fri, 08-May-20 10:18:08 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+37 verbose headers   'cf-ray': '4d42ed780cb9d1a7-HKG',
+37 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+37 verbose headers   vary: 'Accept-Encoding',
+37 verbose headers   server: 'cloudflare',
+37 verbose headers   'content-encoding': 'gzip' }
+38 verbose request invalidating /home/mengyaow/.npm/registry.npmjs.org/colresizable on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: You do not have permission to publish "colresizable". Are you logged in as the correct user? : colresizable
+40 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+40 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:178:7
+40 verbose stack     at Gunzip.onEnd (zlib.js:227:5)
+40 verbose stack     at emitNone (events.js:91:20)
+40 verbose stack     at Gunzip.emit (events.js:185:7)
+40 verbose stack     at endReadableNT (_stream_readable.js:934:12)
+40 verbose stack     at _combinedTickCallback (internal/process/next_tick.js:74:11)
+40 verbose stack     at process._tickCallback (internal/process/next_tick.js:98:9)
+41 verbose statusCode 403
+42 verbose pkgid colresizable
+43 verbose cwd /home/mengyaow/projects/nv-column-resizable
+44 error Linux 3.13.0-128-generic
+45 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+46 error node v6.2.2
+47 error npm  v3.9.5
+48 error code E403
+49 error You do not have permission to publish "colresizable". Are you logged in as the correct user? : colresizable
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]

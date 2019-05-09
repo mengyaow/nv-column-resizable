@@ -1,5 +1,5 @@
 {
-	"name" : "colresizable",
+	"name" : "nv-column-resizable",
 	"version" : "1.7.0",
     "description" : "jQuery plugin to resize table columns",
 	"title" : "nv column resizable",
