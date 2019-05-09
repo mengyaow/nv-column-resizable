@@ -1,3 +1,9 @@
+###This is forked from https://github.com/alvaro-prieto/colResizable and thanks to Alvaro!
+fixed some column resize issue for resizeMode: overflow:
+* table width doesn't change correctly when reduce cell width.
+* Other columns' width would change together with the dragging columns.
+* And disabled onResize for window resizing handler(my project doesn't need this).
+
 ![alt text](http://bacubacu.com/colresizable/githubLogo.png "colResizable jQuery plugin")
 
 # colResizable
