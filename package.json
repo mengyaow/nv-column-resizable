@@ -1,0 +1,38 @@
+{
+	"name" : "colresizable",
+	"version" : "1.7.0",
+    "description" : "jQuery plugin to resize table columns",
+	"title" : "nv column resizable",
+	"author" : {
+		"name" : "Mengyao Wu",
+	},
+	"licenses" : [{
+			"type" : "MIT",
+			"url" : "MIT-LICENSE.txt"
+		}, {
+			"type" : "GPL",
+			"url" : "GPL-LICENSE.txt"
+		}
+	],
+	"dependencies" : {
+		"jquery" : "1 - 3"
+	},
+
+	"keywords" : [
+		"resize table",
+		"resize columns",
+		"resize",
+		"resizable",
+		"columns",
+		"jquery-plugin",
+		"table",
+		"range slider",
+        "colresizable",
+        "resize table columns",
+        "jquery"
+	],
+	"files" : [
+		"colResizable.min.js",
+		"./samples"
+	]
+}
